@@ -18,9 +18,9 @@ get '/' do
 backend_guess = params[:word_input]
 end
 
-post '/name' do
+post '/word' do
 
-	backend_name = params[:name_input]
+	backend_word = params[:word_input]
 
 	#erb :greeting, :locals => {:user_name => user_name}
 	erb :age, :locals => {:user_name => backend_name}
