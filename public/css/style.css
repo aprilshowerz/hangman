@@ -1,5 +1,14 @@
 
 
+.face{
+  position: absolute;
+  left:130px;
+  top: 65px;
+  z-index: 2;
+
+
+}
+
 .left_leg{
   position: absolute;
   left:124px;
