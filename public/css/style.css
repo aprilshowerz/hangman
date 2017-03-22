@@ -1,5 +1,11 @@
 
 
+.left_leg{
+  position: absolute;
+  left:124px;
+  top:265px;
+}
+
 .right_arm{
   position: absolute;
   left:162px;
