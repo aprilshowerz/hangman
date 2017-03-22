@@ -11,3 +11,15 @@ get "/" do
 	erb :index
 end
 
+post "/" do
+	verify_guess
+	game_over?
+	update
+	erb :index
+end
+
+lives = 7
+while (lives >=1) do
+
+
+end
