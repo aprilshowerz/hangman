@@ -1,5 +1,12 @@
 
 
+.body{
+  position: absolute;
+  left:115px;
+  top: 145px;
+
+}
+
 .face{
   position: absolute;
   left:130px;
