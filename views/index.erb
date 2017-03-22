@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Hangman</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -10,24 +10,24 @@
   <div class="instructions">Welcome to Hangman. Try to guess the letters of the secret word. If you make 6 incorrect guesses you lose!</p><br><br></div>
   <div class="game_box">
     <div class="draw_box">
-      <img src="scaffold.png" class="scaffold">
+      <img src="public/scaffold.png" class="scaffold">
       <% if @incorrect_guesses > 0 %>
-        <img src="head.png" class="head">
+        <img src="public/head.png" class="head">
       <% end %>
       <% if @incorrect_guesses > 1 %>
-        <img src="left_arm_body.png" class="body">
+        <img src="public/left_arm_body.png" class="body">
       <% end %>
       <% if @incorrect_guesses > 2 %>
-        <img src="right_arm.png" class="right_arm">
+        <img src="public/right_arm.png" class="right_arm">
       <% end %>
       <% if @incorrect_guesses > 3 %>
-        <img src="left_leg.png" class="left_leg">
+        <img src="public/left_leg.png" class="left_leg">
       <% end %>
       <% if @incorrect_guesses > 4 %>
-        <img src="right_leg.png" class="right_leg">
+        <img src="public/right_leg.png" class="right_leg">
       <% end %>
       <% if @incorrect_guesses > 5 %>
-        <img src="face.png" class="face">
+        <img src="public/face.png" class="face">
       <% end %>
     </div>
     <div class="info_box" >
