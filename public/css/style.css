@@ -1,5 +1,14 @@
 
 
+.draw_box{
+  position:relative;
+  vertical-align: top;
+  display:inline-block;
+  height:400px;
+  width:500px;
+
+}
+
 .info_box{
   display:inline-block;
   vertical-align: top;
