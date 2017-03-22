@@ -58,5 +58,26 @@ helpers do
 		end
 	end
 
+	def update
+		@guessed=session[:guessed]
+		@incorrect_guesses=session[:incorrect_guesses]
+		@win=session[:win]
+		@lose=session[:lose]
+		@partial_word=session[:partial_word]
+
+
+		if @win
+			@message= "Congratulations, you won! <br>Play again?"
+		end
+		if @lose
+			@message= "GG, you lose. The secret word was #{session[:secret_word]} <br>Play again?"
+		end
+
+		if @win || @lose
+			session[:secret_word]=nil
+		end
+	end
+
 	
+
 end
