@@ -1,5 +1,11 @@
 
 
+.right_leg{
+  position: absolute;
+  left:161px;
+  top:265px;
+}
+
 .scaffold{
   position:absolute;
   left:160px;
