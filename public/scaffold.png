@@ -1,0 +1,104 @@
+.title{
+	text-align:center;
+	font-size:50px;
+}
+
+.instructions{
+	margin-top: 30px;
+	text-align:center;
+}
+
+.draw_box{
+	position:relative;
+	vertical-align: top;
+	display:inline-block;
+	height:400px;
+	width:500px;
+
+}
+
+.info_box{
+	display:inline-block;
+	vertical-align: top;
+	width:500px;
+
+}
+
+.head{
+	position: absolute;
+	left:105px;
+	top:45px;
+	z-index: 1;
+}
+
+.body{
+	position: absolute;
+	left:115px;
+	top: 145px;
+
+}
+
+.face{
+	position: absolute;
+	left:130px;
+	top: 65px;
+	z-index: 2;
+
+
+}
+
+.left_leg{
+	position: absolute;
+	left:124px;
+	top:265px;
+}
+
+.right_arm{
+	position: absolute;
+	left:162px;
+	top:170px;
+}
+
+.right_leg{
+	position: absolute;
+	left:161px;
+	top:265px;
+}
+
+.scaffold{
+	position:absolute;
+	left:160px;
+}
+
+.game_box{
+	width:1010px;
+	margin:auto;
+	text-align:center;
+}
+
+.message_box{
+	font-size: 20px;
+}
+
+.info{
+	margin-top: 70px;
+	text-align:left;
+	margin-left:50px;
+}
+
+.big_button{
+	width:100px;
+	height:50px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top:15px;
+}
+
+.label{
+	font-weight: bold;
+}
+
+
+body{
+	font-family: Arial;
+}
