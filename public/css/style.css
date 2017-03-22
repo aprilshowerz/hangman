@@ -1,5 +1,10 @@
 
 
+.scaffold{
+  position:absolute;
+  left:160px;
+}
+
 .game_box{
   width:1010px;
   margin:auto;
