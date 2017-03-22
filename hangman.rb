@@ -38,5 +38,25 @@ helpers do
 		session[:partial_word]="_"*@secret_word.size
 	end
 
+	def verify_guess
 
+		if (params["guess"].size!=1 || params["guess"]>'z' || params["guess"]<'A' || (session[:guessed].include? (params["guess"].upcase)))
+			@message="Invalid input"
+
+		else
+			session[:guessed]<<params["guess"].upcase
+			if !session[:secret_word].include? params["guess"].upcase
+				session[:incorrect_guesses]+=1
+			else
+				secret_array=session[:secret_word].split(//)
+				secret_array.size.times do |i|
+					if secret_array[i]==params["guess"].upcase
+						session[:partial_word][i]=secret_array[i]
+					end
+				end
+			end
+		end
+	end
+
+	
 end
