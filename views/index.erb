@@ -30,7 +30,17 @@
         <img src="face.png" class="face">
       <% end %>
     </div>
-   
+    <div class="info_box" >
+      <div class="info">
+        <p><span class="label">Secret Word:  </span><%= @partial_word.split(//).join(" ")%></p>
+        <div></div>
+        <p><span class="label">Guesses: </span><%= @guessed.sort.join(" ")%></p>
+        <div></div>
+          <p><span class="label">Incorrect Guesses: </span><%= @incorrect_guesses%></p>
+        <div></div>
+        <% if !(@lose || @win) %>
+          
+          
   </div>
 
 </body>
