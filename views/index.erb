@@ -44,7 +44,13 @@
         <% end %>
       </div>
     </div>
-    
+    <div class="message_box">
+      <%= @message %>
+      <% if @lose || @win%>
+        <form action='/' method="get"><input class="big_button" type="submit" value="Of course!"></form>
+      <%end%>
+      
+    </div>
   </div>
 
 </body>
