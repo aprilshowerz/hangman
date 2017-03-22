@@ -1,5 +1,12 @@
 
 
+.head{
+  position: absolute;
+  left:105px;
+  top:45px;
+  z-index: 1;
+}
+
 .body{
   position: absolute;
   left:115px;
