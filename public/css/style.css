@@ -1,5 +1,12 @@
 
 
+.info_box{
+  display:inline-block;
+  vertical-align: top;
+  width:500px;
+
+}
+
 .head{
   position: absolute;
   left:105px;
