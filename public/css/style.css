@@ -1,5 +1,11 @@
 
 
+.game_box{
+  width:1010px;
+  margin:auto;
+  text-align:center;
+}
+
 .message_box{
   font-size: 20px;
 }
