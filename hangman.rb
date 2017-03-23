@@ -1,4 +1,5 @@
 require 'sinatra'
+#reloads sinatra automatically
 require 'sinatra/reloader' if development?
 
 enable :sessions

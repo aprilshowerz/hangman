@@ -24,14 +24,14 @@
 
 }
 
-.head{
+.hangman{
   position: absolute;
   left:105px;
   top:45px;
   z-index: 1;
 }
 
-.body{
+/*.body{
   position: absolute;
   left:115px;
   top: 145px;
@@ -63,7 +63,7 @@
   position: absolute;
   left:161px;
   top:265px;
-}
+}*/
 
 .scaffold{
   position:absolute;

@@ -10,24 +10,24 @@
   <div class="instructions">Welcome to Hangman. Try to guess the letters of the secret word. If you make 6 incorrect guesses you lose!</p><br><br></div>
   <div class="game_box">
     <div class="draw_box">
-      <img src="public/scaffold.png" class="scaffold">
+      <img src="scaffolding.png" class="hangman">
       <% if @incorrect_guesses > 0 %>
-        <img src="public/head.png" class="head">
+        <img src="deadman.png" class="hangman">
       <% end %>
       <% if @incorrect_guesses > 1 %>
-        <img src="public/left_arm_body.png" class="body">
+        <img src="arms-legs.png" class="hangman">
       <% end %>
       <% if @incorrect_guesses > 2 %>
-        <img src="public/right_arm.png" class="right_arm">
+        <img src="hips.png" class="hangman">
       <% end %>
       <% if @incorrect_guesses > 3 %>
-        <img src="public/left_leg.png" class="left_leg">
+        <img src="torso.png" class="hangman">
       <% end %>
       <% if @incorrect_guesses > 4 %>
-        <img src="public/right_leg.png" class="right_leg">
+        <img src="head.png" class="hangman">
       <% end %>
       <% if @incorrect_guesses > 5 %>
-        <img src="public/face.png" class="face">
+        <img src="noose.png" class="hangman">
       <% end %>
     </div>
     <div class="info_box" >
