@@ -32,9 +32,10 @@ helpers do
 		dictionary=File.readlines "5desk.txt"
 		#getting each line of dictionary, changing them to lowercase and iterating through them.
 		dictionary.map! {|i| i.downcase.chomp!}
-		#
+		#sets secret_word equal to a random choice from the dictionary? study this line more.
 		secret_word=dictionary[rand(dictionary.size)]
 		end
+		# makes secret_word accessible to other views. Makes it a global variable by using @.
 		@secret_word=secret_word
 		session[:secret_word]=@secret_word.upcase
 		session[:guessed]=[]
