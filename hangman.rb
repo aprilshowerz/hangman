@@ -4,6 +4,7 @@ require 'sinatra/reloader' if development?
 enable :sessions
 
 get "/" do
+	# starts a new game if the secret_word is nil for this session.
 	if session[:secret_word]==nil
 		new_game
 	end
@@ -22,11 +23,16 @@ helpers do
 
 	def new_game
 
+		# makes secret_word blank.
 		secret_word=""
 
+		# if secret_word is less than 5 or greater than 12 run this loop.
 		while (secret_word.size<5 || secret_word.size>12) do
+		#reads the lines of the 5desk.txt file and sets them equal to dictionary.
 		dictionary=File.readlines "5desk.txt"
+		#getting each line of dictionary, changing them to lowercase and iterating through them.
 		dictionary.map! {|i| i.downcase.chomp!}
+		#
 		secret_word=dictionary[rand(dictionary.size)]
 		end
 		@secret_word=secret_word
