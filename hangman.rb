@@ -82,20 +82,27 @@ helpers do
 	end
 
 	def update
+		#sets guessed as a global variable.
 		@guessed=session[:guessed]
+		#sets incorrect_guesses as a global variable.
 		@incorrect_guesses=session[:incorrect_guesses]
+		#sets win as a global variable.
 		@win=session[:win]
+		#sets lose as a global variable.
 		@lose=session[:lose]
+		#sets partial_word as a global variable
 		@partial_word=session[:partial_word]
 
 
 		if @win
+			#winning message.
 			@message= "Congratulations, you won! <br>Play again?"
 		end
 		if @lose
-			@message= "GG, you lose. The secret word was #{session[:secret_word]} <br>Play again?"
+			#losing message.
+			@message= "You're a loser! The secret word was #{session[:secret_word]} <br>Wanna try to redeem yourself?"
 		end
-
+		#if win or lose, reset the secret_word to a nil state.
 		if @win || @lose
 			session[:secret_word]=nil
 		end
