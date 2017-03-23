@@ -37,11 +37,19 @@ helpers do
 		end
 		# makes secret_word accessible to other views. Makes it a global variable by using @.
 		@secret_word=secret_word
+		#sets the session variables to pass values through to other views. 
+		#secret_word is set to the global variable secret_word (which is an empty string) and set to uppercase.
 		session[:secret_word]=@secret_word.upcase
+		#sets guessed to an empty variable.
 		session[:guessed]=[]
+		#sets incorrect_guesses to zero so you start fresh with a clean slate for the new game.
 		session[:incorrect_guesses]=0
+		#sets win to false, because you haven't won yet.
 		session[:win]=false
+		#sets lose to false, because you haven't lost yet.
 		session[:lose]=false
+		#sets partial_word to and underscore and multiplies it by the secret word size. This displays
+		# the correct amount of underscores.
 		session[:partial_word]="_"*@secret_word.size
 	end
 
