@@ -109,13 +109,19 @@ helpers do
 	end
 
 	def game_over?
+		#if incorrect_guesses is greateer than 5....
 		if session[:incorrect_guesses]>5
+			#set lose to true.
 			session[:lose]=true
 		
 		else
+			#set win to true.
 			session[:win]=true
+			#iterate over each character of secret_word.
 			session[:secret_word].each_char do |i|
+				#if guessed does not include one of those characters....
 				if !session[:guessed].include? i
+					#set win to false.
 					session[:win]=false
 				end
 			end
