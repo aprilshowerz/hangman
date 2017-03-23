@@ -54,18 +54,26 @@ helpers do
 	end
 
 	def verify_guess
-
+		#if guess size changes to 1 or guess is greater than(comes after?) Z or lower than(comes before?) A or if the guess is a letter that has been guessed already (guessed).
 		if (params["guess"].size!=1 || params["guess"]>'z' || params["guess"]<'A' || (session[:guessed].include? (params["guess"].upcase)))
+			#sets message to Invalid input.
 			@message="Invalid input"
 
 		else
+			#adds guess to the guessed array and makes it uppercase.
 			session[:guessed]<<params["guess"].upcase
+			# if secret_word does not include the guess (and makes it upcase)
 			if !session[:secret_word].include? params["guess"].upcase
+				#increment the incorrect_guesses value by 1.
 				session[:incorrect_guesses]+=1
 			else
+				#splits the secret_word into an array called secret_array.
 				secret_array=session[:secret_word].split(//)
+				#iterates over secred_array for each position.
 				secret_array.size.times do |i|
+					#if any of the iterations of the secret array are equal to the guess (makes it upcase too)
 					if secret_array[i]==params["guess"].upcase
+						#set partial_word equal to that secret_array iteration value.
 						session[:partial_word][i]=secret_array[i]
 					end
 				end
