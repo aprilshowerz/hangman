@@ -12,22 +12,22 @@
     <div class="draw_box">
       <img src="scaffolding.png" class="hangman">
       <% if @incorrect_guesses > 0 %>
-        <img src="deadman.png" class="hangman">
+        <img src="noose.png" class="hangman">
       <% end %>
       <% if @incorrect_guesses > 1 %>
-        <img src="arms-legs.png" class="hangman">
-      <% end %>
-      <% if @incorrect_guesses > 2 %>
-        <img src="hips.png" class="hangman">
-      <% end %>
-      <% if @incorrect_guesses > 3 %>
-        <img src="torso.png" class="hangman">
-      <% end %>
-      <% if @incorrect_guesses > 4 %>
         <img src="head.png" class="hangman">
       <% end %>
+      <% if @incorrect_guesses > 2 %>
+        <img src="torso.png" class="hangman">
+      <% end %>
+      <% if @incorrect_guesses > 3 %>
+        <img src="hips.png" class="hangman">
+      <% end %>
+      <% if @incorrect_guesses > 4 %>
+        <img src="arms-legs.png" class="hangman">
+      <% end %>
       <% if @incorrect_guesses > 5 %>
-        <img src="noose.png" class="hangman">
+        <img src="deadman.png" class="hangman">
       <% end %>
     </div>
     <div class="info_box" >
